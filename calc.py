@@ -15,8 +15,11 @@ elif operation == "*":
 	print (f"{num1} * {num2} = {total}")
 
 elif operation == "/":
-	total = num1 / num2
-	print (f"{num1} / {num2} = {total}")
+	if num2 == 0:
+		print("You cannot divide by zero, the answer is undefined.")
+	else:
+		total = num1 / num2
+		print (f"{num1} / {num2} = {total}")
 
 elif operation == "**":
 	total = num1 ** num2
@@ -29,3 +32,5 @@ elif operation == "//":
 elif operation == "%":
 	total = num1 % num2
 	print (f"{num1} % {num2} = {total}")
+else:
+	print("Invalid operation. Acceptable operations are +, -, *, /, **, //, %.")
